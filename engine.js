@@ -172,23 +172,27 @@ var TitleScreen = function TitleScreen(title,subtitle,callback) {
   this.draw = function(ctx) {
     ctx.fillStyle = "#FFFFFF";
 	
-    ctx.font = "bold 40px bangers";
-    var measure = ctx.measureText("IECSE GBM");  
-    ctx.fillText("IECSE GBM",Game.width/2 - measure.width/2,Game.height/2-40);
+    
 		
 	
-	ctx.font = "bold 20px bangers";
-    var measure = ctx.measureText(title);  
-    ctx.fillText(title,Game.width/2 - measure.width/2,Game.height/2);
+	ctx.font = "bold 30px bangers";
+	var measure = ctx.measureText(title);  
+    ctx.fillText(title,Game.width/2 - measure.width/2,Game.height/2-80);
+
+    ctx.font = "bold 80px bangers";
+    ctx.fillStyle = 'blue'
+    var measure = ctx.measureText("IECSE");  
+    ctx.fillText("IECSE",Game.width/2 - measure.width/2,Game.height/2);
 	
-    ctx.font = "bold 20px bangers";
-    var measure2 = ctx.measureText("7.9.18 MV SEMINAR HALL");
-    ctx.fillText("7.9.18 MV SEMINAR HALL",Game.width/2 - measure2.width/2,Game.height/2 + 40);
+    ctx.font = "bold 30px bangers";
+    ctx.fillStyle = 'white'
+    var measure2 = ctx.measureText("Official Computer Club");
+    ctx.fillText("Official Computer Club",Game.width/2 - measure2.width/2,Game.height/2 + 40);
 	
 	
-    ctx.font = "bold 20px bangers";
-    var measure2 = ctx.measureText("1700 Hours");
-    ctx.fillText("1700 Hours",Game.width/2 - measure2.width/2,Game.height/2 + 80);
+    ctx.font = "bold 30px bangers";
+    var measure2 = ctx.measureText("MIT");
+    ctx.fillText("of MIT",Game.width/2 - measure2.width/2,Game.height/2 + 80);
 	
     ctx.font = "bold 20px bangers";
     var measure2 = ctx.measureText(subtitle);
