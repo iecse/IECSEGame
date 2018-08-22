@@ -1,5 +1,5 @@
 var sprites = {
- ship: { sx: 0, sy: 0, w: 37, h: 42, frames: 1 },
+ ship: { sx: 2, sy: 0, w: 37, h: 42, frames: 1 },
  missile: { sx: 0, sy: 30, w: 2, h: 10, frames: 1 },
  enemy_purple: { sx: 37, sy: 0, w: 42, h: 43, frames: 1 },
  enemy_bee: { sx: 79, sy: 0, w: 37, h: 43, frames: 1 },
@@ -17,7 +17,7 @@ var enemies = {
   circle:   { x: 250,   y: -50, sprite: 'enemy_circle', health: 10, 
               A: 0,  B: -100, C: 1, E: 20, F: 100, G: 1, H: Math.PI/2 },
   wiggle:   { x: 100, y: -50, sprite: 'enemy_bee', health: 20, 
-              B: 50, C: 4, E: 100, firePercentage: 0.001, missiles: 2 },
+              B: 50, C: 4, E: 100, firePercentage: 0.001, missiles: 2},
   step:     { x: 0,   y: -50, sprite: 'enemy_circle', health: 10,
               B: 150, C: 1.2, E: 75 }
 };
@@ -68,14 +68,20 @@ var playGame = function() {
 
 var winGame = function() {
   Game.setBoard(3,new TitleScreen("You win!", 
-                                  "Press fire to play again",
+                                  " ",
                                   playGame));
+  setTimeout(function() {
+  window.location.href = "https://iecsemanipal.com/";
+}, 1500);
 };
 
 var loseGame = function() {
-  Game.setBoard(3,new TitleScreen("You lose!", 
-                                  "Press fire to play again",
+  Game.setBoard(3,new TitleScreen("Better luck next time!", 
+                                  " ",
                                   playGame));
+  setTimeout(function() {
+  window.location.href = "https://iecsemanipal.com/";
+}, 1500);
 };
 
 var Starfield = function(speed,opacity,numStars,clear) {
