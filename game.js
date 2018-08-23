@@ -1,5 +1,5 @@
 var sprites = {
- ship: { sx: 0, sy: 0, w: 37, h: 42, frames: 1 },
+ ship: { sx: 2, sy: 0, w: 37, h: 42, frames: 1 },
  missile: { sx: 0, sy: 30, w: 2, h: 10, frames: 1 },
  enemy_purple: { sx: 37, sy: 0, w: 42, h: 43, frames: 1 },
  enemy_bee: { sx: 79, sy: 0, w: 37, h: 43, frames: 1 },
@@ -66,10 +66,17 @@ var playGame = function() {
   Game.setBoard(5,new GamePoints(0));
 };
 
+var redirect = function()
+{
+  setTimeout(function() {
+  window.location.href = "https://iecsemanipal.com/";
+}, 2000);
+}
+
 var winGame = function() {
   Game.setBoard(3,new TitleScreen("You win!", 
                                   " ",
-                                  playGame));
+                                  redirect));
   setTimeout(function() {
   window.location.href = "https://iecsemanipal.com/";
 }, 1500);
@@ -78,7 +85,7 @@ var winGame = function() {
 var loseGame = function() {
   Game.setBoard(3,new TitleScreen("Better luck next time!", 
                                   " ",
-                                  playGame));
+                                  redirect));
   setTimeout(function() {
   window.location.href = "https://iecsemanipal.com/";
 }, 1500);
