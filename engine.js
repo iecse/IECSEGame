@@ -385,7 +385,7 @@ var TouchControls = function() {
 
     ctx.fillStyle = "#FFF";
     ctx.globalAlpha = 1.0;
-    ctx.font = "bold " + (3*unitWidth/4) + "px arial";
+    ctx.font = "bold " + (3*unitWidth/4) + "px banger";
 
     var txtSize = ctx.measureText(txt);
 
@@ -454,7 +454,7 @@ var GamePoints = function() {
 
   this.draw = function(ctx) {
     ctx.save();
-    ctx.font = "bold 18px arial";
+    ctx.font = "bold 18px banger";
     ctx.fillStyle= "#FFFFFF";
 
     var txt = "" + Game.points;
