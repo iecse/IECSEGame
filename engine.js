@@ -175,7 +175,7 @@ var TitleScreen = function TitleScreen(title,subtitle,callback) {
     
 		
 	
-	ctx.font = "bold 30px bangers";
+	ctx.font = "bold 30px arial";
 	var measure = ctx.measureText(title);  
     ctx.fillText(title,Game.width/2 - measure.width/2,Game.height/2-80);
 
