@@ -175,11 +175,11 @@ var TitleScreen = function TitleScreen(title,subtitle,callback) {
     
 		
 	
-	ctx.font = "bold 30px arial";
+	ctx.font = "bold 30px bangers";
 	var measure = ctx.measureText(title);  
     ctx.fillText(title,Game.width/2 - measure.width/2,Game.height/2-80);
 
-    ctx.font = "bold 80px bangers";
+    ctx.font = "bold 80px arial";
     ctx.fillStyle = 'blue'
     var measure = ctx.measureText("IECSE");  
     ctx.fillText("IECSE",Game.width/2 - measure.width/2,Game.height/2);
