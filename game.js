@@ -66,10 +66,17 @@ var playGame = function() {
   Game.setBoard(5,new GamePoints(0));
 };
 
+var redirect = function()
+{
+  setTimeout(function() {
+  window.location.href = "https://iecsemanipal.com/";
+}, 20 00);
+}
+
 var winGame = function() {
   Game.setBoard(3,new TitleScreen("You win!", 
                                   " ",
-                                  playGame));
+                                  redirect));
   setTimeout(function() {
   window.location.href = "https://iecsemanipal.com/";
 }, 1500);
@@ -78,7 +85,7 @@ var winGame = function() {
 var loseGame = function() {
   Game.setBoard(3,new TitleScreen("Better luck next time!", 
                                   " ",
-                                  playGame));
+                                  redirect));
   setTimeout(function() {
   window.location.href = "https://iecsemanipal.com/";
 }, 1500);
