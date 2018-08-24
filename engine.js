@@ -177,37 +177,35 @@ var EndGameScreen = function EndGameScreen(title,subtitle, callback) {
   var measure = ctx.measureText(title);  
     ctx.fillText(title,Game.width/2 - measure.width/2,Game.height/2-160);
 
-    ctx.font = "bold 90px arial";
-    ctx.fillStyle = 'blue'
-    var measure = ctx.measureText("IECSE");  
-    ctx.fillText("IECSE",Game.width/2 - measure.width/2,Game.height/2-70);
+    var iecse_full = document.getElementById("iecse_full");
+    ctx.drawImage(iecse_full, Game.width/2 - 160, Game.height/2-160);
 
     ctx.font = "bold 28px Roboto";
     ctx.fillStyle = 'white'
     var measure2 = ctx.measureText("General Body Meeting");
-    ctx.fillText("General Body Meeting",Game.width/2 - measure2.width/2,Game.height/2 -30);
+    ctx.fillText("General Body Meeting",Game.width/2 - measure2.width/2,Game.height/2);
 
 
     ctx.font = "bold 20px Roboto";
-    ctx.fillStyle = 'green'
+    ctx.fillStyle = 'white'
     var measure2 = ctx.measureText("7.9.18 | M.V. Seminar Hall");
-    ctx.fillText("7.9.18 | M.V. Seminar Hall",Game.width/2 - measure2.width/2,Game.height/2+10);
+    ctx.fillText("7.9.18 | M.V. Seminar Hall",Game.width/2 - measure2.width/2,Game.height/2+100);
 
     
     ctx.font = "bold 20px Roboto";
     var measure2 = ctx.measureText("Slot 1: 5:45 - 7:00 PM");
-    ctx.fillText("Slot 1: 5:45 - 7:00 PM",Game.width/2 - measure2.width/2,Game.height/2+40);
+    ctx.fillText("Slot 1: 5:45 - 7:00 PM",Game.width/2 - measure2.width/2,Game.height/2+140);
 
 
     ctx.font = "bold 20px Roboto";
     var measure2 = ctx.measureText("Slot 2: 7:00 PM onwards");
-    ctx.fillText("Slot 2: 7:00 PM onwards",Game.width/2 - measure2.width/2,Game.height/2+65);
+    ctx.fillText("Slot 2: 7:00 PM onwards",Game.width/2 - measure2.width/2,Game.height/2+165);
 
  
     ctx.font = "bold 20px Roboto";
     ctx.fillStyle = "white"
     var measure2 = ctx.measureText(subtitle);
-    ctx.fillText(subtitle,Game.width/2 - measure2.width/2,Game.height/2 +140);
+    ctx.fillText(subtitle,Game.width/2 - measure2.width/2,Game.height/2 +240);
   };
 };
 
@@ -224,12 +222,10 @@ var TitleScreen = function TitleScreen(title,subtitle,callback) {
  
   ctx.font = "bold 28px Roboto";
   var measure = ctx.measureText(title);  
-    ctx.fillText(title,Game.width/2 - measure.width/2,Game.height/2-90);
+    ctx.fillText(title,Game.width/2 - measure.width/2,Game.height/2-140);
 
-    ctx.font = "bold 90px arial";
-    ctx.fillStyle = 'blue'
-    var measure = ctx.measureText("IECSE");  
-    ctx.fillText("IECSE",Game.width/2 - measure.width/2,Game.height/2);
+    var iecse_logo = document.getElementById("iecse_logo");
+    ctx.drawImage(iecse_logo, Game.width/2 - 160, Game.height/2-160);
 
     ctx.font = "bold 20px Roboto";
     ctx.fillStyle = "white"
