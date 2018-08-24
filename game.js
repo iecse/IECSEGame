@@ -70,7 +70,7 @@ var redirect = function()
 {
   setTimeout(function() {
   window.location.href = "https://iecsemanipal.com/";
-}, 2000);
+}, 6000);
 }
 
 var winGame = function() {
@@ -79,7 +79,7 @@ var winGame = function() {
                                   redirect));
   setTimeout(function() {
   window.location.href = "https://iecsemanipal.com/";
-}, 1500);
+}, 6000);
 };
 
 var loseGame = function() {
@@ -88,7 +88,7 @@ var loseGame = function() {
                                   redirect));
   setTimeout(function() {
   window.location.href = "https://iecsemanipal.com/";
-}, 1500);
+}, 6000);
 };
 
 var Starfield = function(speed,opacity,numStars,clear) {
