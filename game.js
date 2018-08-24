@@ -74,7 +74,7 @@ var redirect = function()
 }
 
 var winGame = function() {
-  Game.setBoard(3,new TitleScreen("You win!", 
+  Game.setBoard(3,new EndGameScreen("You win!", 
                                   " ",
                                   redirect));
   setTimeout(function() {
@@ -83,7 +83,7 @@ var winGame = function() {
 };
 
 var loseGame = function() {
-  Game.setBoard(3,new TitleScreen("Better luck next time!", 
+  Game.setBoard(3,new EndGameScreen("Better luck next time!", 
                                   " ",
                                   redirect));
   setTimeout(function() {
