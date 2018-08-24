@@ -171,35 +171,58 @@ var TitleScreen = function TitleScreen(title,subtitle,callback) {
 
   this.draw = function(ctx) {
     ctx.fillStyle = "#FFFFFF";
-	
+  
     
-		
-	
-	ctx.font = "bold 30px bangers";
-	var measure = ctx.measureText(title);  
-    ctx.fillText(title,Game.width/2 - measure.width/2,Game.height/2-80);
+    
+  
+ 
+ 
+  ctx.font = "bold 28px Roboto";
+  var measure = ctx.measureText(title);  
+    ctx.fillText(title,Game.width/2 - measure.width/2,Game.height/2-160);
 
-    ctx.font = "bold 80px arial";
+    ctx.font = "bold 90px arial";
     ctx.fillStyle = 'blue'
     var measure = ctx.measureText("IECSE");  
-    ctx.fillText("IECSE",Game.width/2 - measure.width/2,Game.height/2);
-	
-    ctx.font = "bold 30px bangers";
+    ctx.fillText("IECSE",Game.width/2 - measure.width/2,Game.height/2-70);
+
+    ctx.font = "bold 28px Roboto";
     ctx.fillStyle = 'white'
-    var measure2 = ctx.measureText("Official Computer Club");
-    ctx.fillText("Official Computer Club",Game.width/2 - measure2.width/2,Game.height/2 + 40);
-	
-	
-    ctx.font = "bold 30px bangers";
-    var measure2 = ctx.measureText("MIT");
-    ctx.fillText("of MIT",Game.width/2 - measure2.width/2,Game.height/2 + 80);
-	
-    ctx.font = "bold 20px bangers";
+    var measure2 = ctx.measureText("General Body Meeting");
+    ctx.fillText("General Body Meeting",Game.width/2 - measure2.width/2,Game.height/2 -30);
+
+
+    ctx.font = "bold 20px Roboto";
+    ctx.fillStyle = 'green'
+    var measure2 = ctx.measureText("7.9.18 | M.V. Seminar Hall");
+    ctx.fillText("7.9.18 | M.V. Seminar Hall",Game.width/2 - measure2.width/2,Game.height/2+10);
+
+    
+    ctx.font = "bold 20px Roboto";
+    var measure2 = ctx.measureText("Slot 1: 5:45 - 7:00 PM");
+    ctx.fillText("Slot 1: 5:45 - 7:00 PM",Game.width/2 - measure2.width/2,Game.height/2+40);
+
+
+    ctx.font = "bold 20px Roboto";
+    var measure2 = ctx.measureText("Slot 2: 7:00 PM onwards");
+    ctx.fillText("Slot 2: 7:00 PM onwards",Game.width/2 - measure2.width/2,Game.height/2+65);
+
+    /*ctx.font = "bold 28px Roboto";
+    ctx.fillStyle = 'white'
+    var measure2 = ctx.measureText("The Official");
+    ctx.fillText("The Official",Game.width/2 - measure2.width/2,Game.height/2 -180);
+  
+  
+    ctx.font = "bold 28px Roboto";
+    var measure2 = ctx.measureText("Computer Science Club");
+    ctx.fillText("Computer Science Club",Game.width/2 - measure2.width/2,Game.height/2 -150);*/
+  
+    ctx.font = "bold 20px Roboto";
+    ctx.fillStyle = "white"
     var measure2 = ctx.measureText(subtitle);
-    ctx.fillText(subtitle,Game.width/2 - measure2.width/2,Game.height/2 + 120);
+    ctx.fillText(subtitle,Game.width/2 - measure2.width/2,Game.height/2 +140);
   };
 };
-
 
 var GameBoard = function() {
   var board = this;
