@@ -162,20 +162,16 @@ var SpriteSheet = new function() {
   return this;
 };
 
-var TitleScreen = function TitleScreen(title,subtitle,callback) {
+var EndGameScreen = function EndGameScreen(title,subtitle, callback) {
+
   var up = false;
   this.step = function(dt) {
     if(!Game.keys['fire']) up = true;
     if(up && Game.keys['fire'] && callback) callback();
   };
-
+  
   this.draw = function(ctx) {
     ctx.fillStyle = "#FFFFFF";
-  
-    
-    
-  
- 
  
   ctx.font = "bold 28px Roboto";
   var measure = ctx.measureText(title);  
@@ -207,21 +203,40 @@ var TitleScreen = function TitleScreen(title,subtitle,callback) {
     var measure2 = ctx.measureText("Slot 2: 7:00 PM onwards");
     ctx.fillText("Slot 2: 7:00 PM onwards",Game.width/2 - measure2.width/2,Game.height/2+65);
 
-    /*ctx.font = "bold 28px Roboto";
-    ctx.fillStyle = 'white'
-    var measure2 = ctx.measureText("The Official");
-    ctx.fillText("The Official",Game.width/2 - measure2.width/2,Game.height/2 -180);
-  
-  
-    ctx.font = "bold 28px Roboto";
-    var measure2 = ctx.measureText("Computer Science Club");
-    ctx.fillText("Computer Science Club",Game.width/2 - measure2.width/2,Game.height/2 -150);*/
-  
+ 
     ctx.font = "bold 20px Roboto";
     ctx.fillStyle = "white"
     var measure2 = ctx.measureText(subtitle);
     ctx.fillText(subtitle,Game.width/2 - measure2.width/2,Game.height/2 +140);
   };
+};
+
+
+var TitleScreen = function TitleScreen(title,subtitle,callback) {
+  var up = false;
+  this.step = function(dt) {
+    if(!Game.keys['fire']) up = true;
+    if(up && Game.keys['fire'] && callback) callback();
+  };
+
+  this.draw = function(ctx) {
+    ctx.fillStyle = "#FFFFFF"; 
+ 
+  ctx.font = "bold 28px Roboto";
+  var measure = ctx.measureText(title);  
+    ctx.fillText(title,Game.width/2 - measure.width/2,Game.height/2-90);
+
+    ctx.font = "bold 90px arial";
+    ctx.fillStyle = 'blue'
+    var measure = ctx.measureText("IECSE");  
+    ctx.fillText("IECSE",Game.width/2 - measure.width/2,Game.height/2);
+
+    ctx.font = "bold 20px Roboto";
+    ctx.fillStyle = "white"
+    var measure2 = ctx.measureText(subtitle);
+    ctx.fillText(subtitle,Game.width/2 - measure2.width/2,Game.height/2 +140);
+
+     };
 };
 
 var GameBoard = function() {
