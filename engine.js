@@ -195,17 +195,17 @@ var EndGameScreen = function EndGameScreen(title,subtitle, callback) {
     ctx.font = "bold 20px Roboto";
     ctx.fillStyle = 'white'
     var measure2 = ctx.measureText("07 - 09 - 2018");
-    ctx.fillText("07 - 09 - 2018",Game.width/2 - measure2.width/2,Game.height/2+115);
+    ctx.fillText("07 - 09 - 2018",Game.width/2 - measure2.width/2,Game.height/2+65);
 
     
     ctx.font = "bold 20px Roboto";
     var measure2 = ctx.measureText("Slot 1: 5:45 PM");
-    ctx.fillText("Slot 1: 5:45 PM",Game.width/2 - measure2.width/2,Game.height/2+140);
+    ctx.fillText("Slot 1: 5:45 PM",Game.width/2 - measure2.width/2,Game.height/2+90);
 
 
     ctx.font = "bold 20px Roboto";
     var measure2 = ctx.measureText("Slot 2: 7:00 PM");
-    ctx.fillText("Slot 2: 7:00 PM",Game.width/2 - measure2.width/2,Game.height/2+165);
+    ctx.fillText("Slot 2: 7:00 PM",Game.width/2 - measure2.width/2,Game.height/2+115);
 
  
     ctx.font = "bold 20px Roboto";
